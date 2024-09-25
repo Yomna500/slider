@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  margin: auto;
+  width: 50%;
+  display: none;
+  transition: 0.6s ease;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+img.displaySlide {
+  display: block;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(212, 212, 212, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+.displaydot {
+  background-color: #717171;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
